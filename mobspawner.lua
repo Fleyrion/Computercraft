@@ -1,12 +1,14 @@
+local mobcolor = {
 --Spawner Cable Configuration
-local spider=colors.brown
-local zombie=colors.pink
-local creeper=colors.blue
-local slime=colors.green
-local blaze=colors.white
-local wither_skeleton=colors.red
+spider=colors.brown,
+zombie=colors.pink,
+creeper=colors.blue,
+slime=colors.green,
+blaze=colors.white,
+wither_skeleton=colors.red,
 --End of Configuration
-
+off=0
+}
 local output=0
 local active={}
 local mob=""
@@ -24,5 +26,5 @@ end
 
 while true do
     input = read()
-    toggle(input)
+    toggle(mobcolor[input])
 end
