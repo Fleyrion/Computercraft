@@ -23,6 +23,6 @@ end
 
 while true do
     --input = read()
-    wait(60)
+    sleep(60)
     toggle(variables.mobcolor[input])
 end
