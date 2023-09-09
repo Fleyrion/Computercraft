@@ -19,13 +19,12 @@ function draw()
     center=win1y/2-mobs/2
     for pi,pj in pairs(variables.mobnames) do
         win1.setCursorPos(8,center+px)
+        win1.setTextColor(colors.black)
         if variables.mobcolor[pi]==colors.white then
-            win1.setTextColor(colors.black)
-            win1.setBackgroudColor(colors.white)
+            win1.setBackgroundColor(colors.white)
             win1.write(pj)
-            win1.setTextColor(colors.white)
         else
-            win1.setBackgroudColor(variables.mobcolor[pi])
+            win1.setBackgroundColor(variables.mobcolor[pi])
             win1.write(pj)
         end
         px=px+1
