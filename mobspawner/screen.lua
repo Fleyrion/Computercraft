@@ -42,8 +42,8 @@ while true do
     local outindex = 0
     local outcenter = math.ceil(center)+1
     if x >= 1 and x <= 9 then
-        if y == outcenter+1 then
-            outindex = y-6
+        if y >= outcenter and y <= outcenter + #(index) then
+            outindex = y - #(index)
         end
     end
     controller.toggle(index[outindex])
