@@ -1,20 +1,13 @@
-local mobcolor = {
---Spawner Cable Configuration
-spider=colors.brown,
-zombie=colors.pink,
-creeper=colors.blue,
-slime=colors.green,
-blaze=colors.white,
-wither_skeleton=colors.red,
---End of Configuration
-off=0
-}
+os.loadAPI("variables.lua")
+os.loadAPI("screen.lua")
 local output=0
 local active={}
 local mob=""
-
+variables.mobcolor["off"]=0
 function toggle(mob)
-    if active[mob] then
+    if mob=="off" then
+        output = 0
+    elseif active[mob] then
         output = output - mob
         active[mob]=false
     else
@@ -26,5 +19,5 @@ end
 
 while true do
     input = read()
-    toggle(mobcolor[input])
+    toggle(variables.mobcolor[input])
 end
