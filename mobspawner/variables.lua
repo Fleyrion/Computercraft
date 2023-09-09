@@ -4,7 +4,8 @@ mobcolor = {
     creeper=colors.blue,
     slime=colors.green,
     blaze=colors.white,
-    wither_skeleton=colors.red
+    wither_skeleton=colors.red,
+    enderman=colors.cyan
     }
 mobnames = {
     spider="Spider",
@@ -12,5 +13,6 @@ mobnames = {
     creeper="Creeper",
     slime="Slime",
     blaze="Blaze",
-    wither_skeleton="Wither Skeleton"
+    wither_skeleton="Wither Skeleton",
+    enderman="Enderman"
 }

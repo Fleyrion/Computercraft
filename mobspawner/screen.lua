@@ -34,36 +34,25 @@ function draw()
         win1.write(pj)
     end
     px=0
-    --win1.setVisible(false)
-end
-draw()
-while true do
-    local event, button, x, y = os.pullEvent("mouse_click")
-    local outindex = 0
-    local outcenter = math.ceil(center)+1
-    if x >= 1 and x <= 9 then
-        if y >= outcenter and y <= outcenter + #(index) then
-            outindex = y - #(index)
+
+    while true do
+        local event, button, x, y = os.pullEvent("mouse_click")
+        local outindex = 0
+        local outcenter = math.ceil(center)+1
+        if x >= 1 and x <= 9 then
+            if y >= outcenter and y <= outcenter + #(index) then
+                outindex = y - #(index)
+            end
+        end
+        controller.toggle(index[outindex])
+        win1.setCursorPos(1,outcenter+outindex-2)
+        if controller.active[index[outindex]] == nil then
+        elseif controller.active[index[outindex]] then
+            win1.setBackgroundColor(colors.green)
+            win1.write("        ")
+        else
+            win1.setBackgroundColor(colors.red)
+            win1.write("        ")
         end
     end
-    controller.toggle(index[outindex])
-    win1.setCursorPos(1,outcenter+outindex-2)
-    if controller.active[index[outindex]] == nil then
-    elseif controller.active[index[outindex]] then
-        win1.setBackgroundColor(colors.green)
-        win1.write("        ")
-    else
-        win1.setBackgroundColor(colors.red)
-        win1.write("        ")
-    end
 end
-
-
---term.setTextColor(colors.white)
---win1.setVisible(false)
---term.setCursorPos(1,1)
---term.clear()
---print("Event: " ..event)
---print("x: " ..x)
---print("y: " ..y)
-
