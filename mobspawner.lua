@@ -8,7 +8,7 @@ local wither_skeleton=colors.red
 --End of Configuration
 
 local output=0
-local active[]=""
+local active={}
 local mob=""
 
 function toggle(mob)
@@ -23,5 +23,6 @@ function toggle(mob)
 end
 
 while true do
-    mob = read()
+    input = read()
+    toggle(input)
 end
