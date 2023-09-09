@@ -5,8 +5,9 @@ local active={}
 local mob=""
 variables.mobcolor["off"]=0
 function toggle(mob)
-    if mob=="off" then
+    if mob==0 then
         output = 0
+        active = {}
     elseif active[mob] then
         output = output - mob
         active[mob]=false
