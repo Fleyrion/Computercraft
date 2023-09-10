@@ -1,3 +1,4 @@
+bundledcable="bottom"
 mobcolor = {
     spider=colors.brown,
     zombie=colors.pink,
@@ -5,6 +6,7 @@ mobcolor = {
     slime=colors.green,
     blaze=colors.white,
     wither_skeleton=colors.red,
+    light=colors.lightBlue,
     }
 mobnames = {
     spider="Spider",
@@ -13,4 +15,5 @@ mobnames = {
     slime="Slime",
     blaze="Blaze",
     wither_skeleton="Wither Skeleton",
+    light="Light",
 }

@@ -56,7 +56,7 @@ function draw()
         local outindex = 0
         local outcenter = center -2
         if x >= 1 and x <= 9 then
-            outindex = y - #(index)
+            outindex = y - #(index) + indextemp
         end
         controller.toggle(index[outindex])
         win1.setCursorPos(1,outcenter+outindex+1)

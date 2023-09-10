@@ -16,5 +16,5 @@ function toggle(mob)
         output = output + mob
         active[mob]=true
     end
-    rs.setBundledOutput("back",output)
+    rs.setBundledOutput(variables.bundledcable,output)
 end
