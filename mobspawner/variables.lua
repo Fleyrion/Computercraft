@@ -5,7 +5,6 @@ mobcolor = {
     slime=colors.green,
     blaze=colors.white,
     wither_skeleton=colors.red,
-    enderman=colors.cyan
     }
 mobnames = {
     spider="Spider",
@@ -14,5 +13,4 @@ mobnames = {
     slime="Slime",
     blaze="Blaze",
     wither_skeleton="Wither Skeleton",
-    enderman="Enderman"
 }
